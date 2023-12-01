@@ -1,0 +1,11 @@
+{
+  "functions": {
+    "api/server": {
+      "source": "backend/api/server.js"
+    }
+  },
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/backend/api/server.js" },
+    { "src": "/(.*)", "dest": "/frontend/$1" }
+  ]
+}

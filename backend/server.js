@@ -1,8 +1,8 @@
 const express = require('express');
 const request = require('request');
-const app = express();
-
 const cors = require('cors');
+
+const app = express();
 app.use(cors());
 
 app.get('/api/resolve-map-url/', (req, res) => {
@@ -25,6 +25,11 @@ app.get('/api/resolve-map-url/', (req, res) => {
             res.status(404).send('Coordinates not found');
         }
     });
+});
+
+// Test the Vercel
+app.get("/", (req, res) => {
+	res.send("You succeeded to deploy backend to Vercel!");
 });
 
 const port = 5000;

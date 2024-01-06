@@ -1,20 +1,15 @@
 {
-  "version": 2,
-  "functions": {
-    "api/server": {
-      "entrypoint": "/server.js"
-    }
-  },
-  "builds": [
-    {
-      "src": "*.js",
-      "use": "@vercel/node"
-    }
+  "version" : 2,
+  "builds" : [
+      {
+          "src" : "server.js",
+          "use" : "@vercel/node"
+      }
   ],
   "routes" : [
-    {
-      "src": "/(.*)",
-      "dest": "/"
-    }
+      {
+          "src" : "/(.*)",
+          "dest" : "server.js"
+      }
   ]
 }
